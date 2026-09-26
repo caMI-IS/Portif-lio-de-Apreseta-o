@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital@0;1&display=swap');
+
+/* ==============================
+VARIÁVEIS
+============================== */
+
+:root {
+--cor-primaria: #000000;
+--cor-secundaria: #F6F6F6;
+--cor-terciaria: #664105;
+--cor-hover: #272727;
+
+
+--fonte-primaria: 'Krona One', sans-serif;
+--fonte-secundaria: 'Montserrat', sans-serif;
+
+
+}
+
+/* ==============================
+CONFIGURAÇÃO GERAL
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+min-height: 100vh;
+
+
+background-color: var(--cor-primaria);
+
+color: var(--cor-secundaria);
+
+overflow-x: hidden;
+
+
+}
+
+/* ==============================
+CABEÇALHO
+============================== */
+
+.cabecalho {
+position: relative;
+
+
+padding: 2% 0 0 15%;
+
+z-index: 10;
+
+
+}
+
+.cabecalho__menu {
+display: flex;
+
+gap: 80px;
+
+
+}
+
+/* ========================================
+PÁGINA SOBRE MIM
+======================================== */
+
+.sobre {
+width: 100%;
+min-height: calc(100vh - 150px);
+
+padding: 70px 15%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+background-color: var(--cor-primaria);
+
+}
+
+/* CONTEÚDO */
+
+.sobre__conteudo {
+width: 100%;
+max-width: 1000px;
+
+
+display: flex;
+flex-direction: column;
+
+gap: 24px;
+
+
+}
+
+/* TÍTULO */
+
+.sobre__titulo {
+position: relative;
+
+
+margin-bottom: 20px;
+
+font-family: var(--fonte-primaria);
+font-size: 2.5rem;
+
+color: var(--cor-secundaria);
+
+letter-spacing: 1px;
+
+
+}
+
+/* LINHA DECORATIVA ABAIXO DO TÍTULO */
+
+.sobre__titulo::after {
+content: "";
+
+
+display: block;
+
+width: 90px;
+height: 4px;
+
+margin-top: 15px;
+
+background-color: var(--cor-terciaria);
+
+border-radius: 10px;
+
+
+}
+
+/* PARÁGRAFOS */
+
+.sobre__texto {
+font-family: var(--fonte-secundaria);
+
+
+font-size: 1.15rem;
+
+line-height: 1.9;
+
+color: var(--cor-secundaria);
+
+text-align: justify;
+
+padding: 20px 25px;
+
+border-left: 3px solid var(--cor-terciaria);
+
+background: linear-gradient(
+    90deg,
+    rgba(102, 65, 5, 0.12),
+    transparent
+);
+
+border-radius: 0 10px 10px 0;
+
+transition: 0.3s ease;
+
+
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.sobre__texto:hover {
+transform: translateX(8px);
+
+
+border-left-color: #a66b0a;
+
+background: linear-gradient(
+    90deg,
+    rgba(102, 65, 5, 0.25),
+    transparent
+);
+
+
+}
+
+/* DESTAQUE DA PRIMEIRA LETRA */
+
+.sobre__texto:first-of-type::first-letter {
+color: var(--cor-terciaria);
+
+
+font-size: 2rem;
+
+font-weight: 700;
+
+
+}
+
+/* ========================================
+RODAPÉ DA PÁGINA
+======================================== */
+.footer {
+    width: 100vw;
+    margin: 0;
+    margin-left: calc(50% - 50vw);
+
+    padding: 25px 20px;
+
+    background-color: #664105;
+    color: #000000;
+
+    text-align: center;
+
+    font-family: var(--fonte-secundaria);
+    font-size: 1.2rem;
+
+    box-sizing: border-box;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.rodape {
+text-align: center;
+
+
+padding: 20px 0;
+
+font-family: var(--fonte-secundaria);
+
+font-size: 1.2rem;
+
+font-weight: 400;
+
+color: var(--cor-primaria);
+
+background-color: var(--cor-terciaria);
+
+
+}
+
+/* ========================================
+RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+    
+}
+
+
+.cabecalho {
+    padding: 5% 5%;
+}
+
+.cabecalho__menu {
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.cabecalho__menu__link {
+    font-size: 1rem;
+}
+
+
+.sobre {
+    padding: 50px 7%;
+
+    min-height: auto;
+}
+
+
+.sobre__titulo {
+    font-size: 1.8rem;
+}
+
+
+.sobre__texto {
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    padding: 15px 18px;
+
+    text-align: left;
+
+}
+
+/* ========================================
+CONTATOS
+======================================== */
+
+.contato {
+width: 100%;
+
+min-height: calc(100vh - 110px);
+
+padding: 45px 15% 35px;
+
+display: flex;
+justify-content: center;
+align-items: flex-start;
+
+background-color: var(--cor-primaria);
+
+
+}
+
+.contato__conteudo {
+width: 100%;
+max-width: 850px;
+
+
+padding: 30px 40px;
+
+display: flex;
+flex-direction: column;
+
+gap: 18px;
+
+border-left: 3px solid var(--cor-terciaria);
+
+background-color: rgba(102, 65, 5, 0.08);
+
+}
+
+/* ========================================
+TÍTULOS
+======================================== */
+
+.contato__titulo {
+margin: 0;
+
+
+font-family: var(--fonte-primaria);
+
+font-size: 1.8rem;
+
+color: var(--cor-secundaria);
+
+}
+
+.contato__titulo::after {
+content: "";
+
+display: block;
+
+width: 55px;
+height: 3px;
+
+margin-top: 8px;
+
+background-color: var(--cor-terciaria);
+
+border-radius: 5px;
+
+}
+
+/* ========================================
+TEXTOS
+======================================== */
+
+.contato__texto {
+margin: 0;
+
+font-family: var(--fonte-secundaria);
+
+font-size: 1rem;
+
+line-height: 1.7;
+
+color: var(--cor-secundaria);
+
+}
+
+.contato__texto strong {
+color: #b77a20;
+}
+
+/* ========================================
+LINKS
+======================================== */
+
+.contato__links {
+display: flex;
+
+justify-content: flex-start;
+
+align-items: center;
+
+gap: 15px;
+
+margin-top: 5px;
+
+flex-wrap: wrap;
+
+
+}
+
+.contato__link {
+min-width: 150px;
+
+
+padding: 13px 20px;
+
+border: 1px solid var(--cor-terciaria);
+
+border-radius: 7px;
+
+background-color: transparent;
+
+color: var(--cor-secundaria);
+
+font-family: var(--fonte-secundaria);
+
+font-size: 0.95rem;
+
+font-weight: 600;
+
+text-align: center;
+
+text-decoration: none;
+
+cursor: pointer;
+
+transition: 0.3s ease;
+
+
+}
+
+.contato__link:hover {
+background-color: var(--cor-terciaria);
+
+
+transform: translateY(-3px);
+
+
+}
+
+/* ========================================
+RODAPÉ
+======================================== */
+
+.rodape {
+width: 100%;
+
+
+padding: 12px 20px;
+
+text-align: center;
+
+background-color: var(--cor-terciaria);
+
+color: var(--cor-primaria);
+
+font-family: var(--fonte-secundaria);
+
+font-size: 0.9rem;
+
+font-weight: 400;
+
+
+}
+
+.rodape p {
+margin: 0;
+}
+
+/* ========================================
+CELULAR
+======================================== */
+
+@media (max-width: 768px) {
+
+}
+
+.cabecalho {
+    padding: 25px 7% 10px;
+}
+
+.cabecalho__menu {
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.cabecalho__menu__link {
+    font-size: 1rem;
+}
+
+
+.contato {
+    min-height: auto;
+
+    padding: 30px 7%;
+}
+
+
+.contato__conteudo {
+    padding: 25px 20px;
+}
+
+
+.contato__titulo {
+    font-size: 1.4rem;
+}
+
+
+.contato__texto {
+    font-size: 0.95rem;
+}
+
+
+.contato__links {
+    flex-direction: column;
+
+    align-items: stretch;
+}
+
+
+.contato__link {
+    width: 100%;
+}
+
+
+.rodape {
+    font-size: 0.8rem;
+}
+
+
+.cabecalho__menu__link {
+font-family: var(--fonte-secundaria);
+
+font-size: 1.5rem;
+
+font-weight: 600;
+
+color: var(--cor-terciaria);
+
+text-decoration: none;
+
+transition: 0.3s;
+
+}
+
+.cabecalho__menu__link:hover {
+color: var(--cor-secundaria);
+
+
+transform: translateY(-2px);
+
+
+}
+
+/* ==============================
+ÁREA DA BONECA
+============================== */
+
+.stage {
+position: relative;
+
+
+width: 100%;
+
+/*
+   Deixa espaço para o cabeçalho
+   e para o rodapé.
+*/
+height: calc(100vh - 150px);
+
+min-height: 500px;
+
+overflow: hidden;
+
+background-color: #000000;
+
+
+}
+
+/* ==============================
+PARTÍCULAS
+============================== */
+
+.particulas {
+position: absolute;
+
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+overflow: hidden;
+
+pointer-events: none;
+
+z-index: 1;
+
+
+}
+
+/* Cada bolinha */
+
+.particula {
+position: absolute;
+
+
+display: block;
+
+width: 6px;
+height: 6px;
+
+border-radius: 50%;
+
+background-color:white;
+
+/*
+   Brilho roxo
+*/
+box-shadow:
+    0 0 5px #F6F6F6,
+    0 0 10px #F6F6F6,
+    0 0 20px #F6F6F6,
+    0 0 35px #F6F6F6;
+
+/*
+   Animação
+*/
+animation-name: brilho;
+
+animation-timing-function: ease-in-out;
+
+animation-iteration-count: infinite;
+
+animation-direction: alternate;
+
+
+}
+
+/* ==============================
+ANIMAÇÃO DAS BOLINHAS
+============================== */
+
+@keyframes brilho {
+
+
+0% {
+    opacity: 0.2;
+
+    transform: scale(0.5) translate(0, 0);
+}
+
+50% {
+    opacity: 1;
+
+    transform: scale(1.2) translate(10px, -15px);
+}
+
+100% {
+    opacity: 0.3;
+
+    transform: scale(0.7) translate(-10px, 10px);
+}
+
+
+}
+
+/* ==============================
+BONECA
+============================== */
+
+.manBox {
+position: absolute;
+
+/*
+   Mais para baixo.
+*/
+bottom: 15px;
+
+left: -200px;
+
+width: 200px;
+height: 200px;
+
+overflow: hidden;
+
+z-index: 3;
+
+/*
+   A boneca atravessa toda a tela.
+*/
+animation-name: manPosition;
+
+animation-duration: 12s;
+
+animation-delay: 1s;
+
+animation-timing-function: linear;
+
+animation-iteration-count: infinite;
+
+
+}
+
+/* Imagem da boneca */
+
+.Boneca {
+position: relative;
+
+
+display: block;
+
+width: 200px;
+
+top: 0;
+
+/*
+   Animação dos frames.
+*/
+animation-name: walking;
+
+animation-duration: 0.8s;
+
+animation-iteration-count: infinite;
+
+animation-timing-function: steps(1);
+
+}
+
+/* ==============================
+FRAMES DA CAMINHADA
+============================== */
+
+@keyframes walking {
+
+
+0% {
+    top: 0;
+}
+
+25% {
+    top: 0;
+}
+
+26% {
+    top: -200px;
+}
+
+50% {
+    top: -200px;
+}
+
+51% {
+    top: 0;
+}
+
+75% {
+    top: 0;
+}
+
+76% {
+    top: -400px;
+}
+
+100% {
+    top: -400px;
+}
+
+
+}
+
+/* ==============================
+BONECA ATRAVESSANDO A TELA
+============================== */
+
+@keyframes manPosition {
+
+/*
+   Começa fora da tela
+*/
+0% {
+    left: -200px;
+}
+
+/*
+   Entra pela esquerda
+*/
+10% {
+    left: 0;
+}
+
+/*
+   Caminha pela tela
+*/
+90% {
+    left: 100%;
+}
+
+/*
+   Sai completamente
+*/
+100% {
+    left: calc(100% + 200px);
+}
+
+
+}
+
+/* ==============================
+RODAPÉ
+============================== */
+
+.rodape {
+position: relative;
+
+z-index: 5;
+
+text-align: center;
+
+padding: 20px 0;
+
+font-family: var(--fonte-secundaria);
+
+font-size: 1.5rem;
+
+font-weight: 400;
+
+color: var(--cor-primaria);
+
+background-color: var(--cor-terciaria);
+
+
+}
+
+/* ==============================
+RESPONSIVIDADE
+============================== */
+
+@media (max-width: 768px) {
+
+.cabecalho {
+    padding: 5% 5%;
+}
+
+.cabecalho__menu {
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.cabecalho__menu__link {
+    font-size: 1rem;
+}
+
+.stage {
+    height: calc(100vh - 130px);
+}
+
+.rodape {
+    font-size: 1rem;
+}
+
+
+}
+
